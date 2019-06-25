@@ -1,53 +1,49 @@
 {
-	"name": "breakpoint-io",
-	"displayName": "breakpoint-io",
-	"description": "",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.35.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld",
-		"onCommand:extension.breakpoint_ls",
-		"onCommand:extension.breakpoint_export",
-		"onCommand:extension.breakpoint_load"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			},
-			{
-				"command": "extension.breakpoint_ls",
-				"title" : "breakpoint-ls"
-			},
-			{
-				"command": "extension.breakpoint_export",
-				"title": "breakpoint-export"
-			},
-			{
-				"command": "extension.breakpoint_load",
-				"title": "breakpoint-load"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"tslint": "^5.12.1",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
-	}
+  "name": "breakpointio",
+  "displayName": "BreakpointIO",
+  "description": "Allows you to export and import your breakpoints",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.35.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*",
+    "onCommand:extension.breakpoint_export",
+    "onCommand:extension.breakpoint_load"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.breakpoint_export",
+        "title": "breakpointio-export"
+      },
+      {
+        "command": "extension.breakpoint_import",
+        "title": "breakpointio-import"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^10.12.21",
+    "@types/sinon": "^7.0.13",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "sinon": "^7.3.2"
+  }
 }
