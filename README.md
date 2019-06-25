@@ -1,4 +1,4 @@
-# BreakpointIO
+# BreakpointIO [![Build Status](https://travis-ci.org/redspart/breakpoint-io.svg?branch=master)](https://travis-ci.org/redspart/breakpoint-io)
 
 `BreakpointIO` a [Visual Studio Code extension](https://marketplace.visualstudio.com/VSCode), allows you to import and export breakpoints to be used by other users, machines, or whatever you desire.
 
