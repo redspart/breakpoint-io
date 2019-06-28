@@ -19,11 +19,11 @@
     "commands": [
       {
         "command": "extension.breakpoint_export",
-        "title": "breakpointio-export"
+        "title": "export breakpoints"
       },
       {
         "command": "extension.breakpoint_import",
-        "title": "breakpointio-import"
+        "title": "import breakpoints"
       }
     ]
   },
