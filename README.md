@@ -13,11 +13,11 @@ Two main features is the import and export functionality.
 
 ### Export breakpoints
 
-Here we create two breakpoints, one regular and one conditional. Then we export them to a `breakpoints.json` file in the `.vscode` folder. You access the `breakpointio-export` command by hitting `control-shift-p` on windows or `command-shift-p` on mac.
+Here we create two breakpoints, one regular and one conditional. Then we export them to a `breakpoints.json` file in the `.vscode` folder. You access the `export breakpoint` command by hitting `control-shift-p` on windows or `command-shift-p` on mac.
 
 ![exporting breakpoints in action](content/export.gif)
 
-We have reset the breakpoints in the above example but kept the `breakpoints.json`. You can see when we import them, all the settings for each breakpiont is kept in it's original location.You access the `breakpointio-import` command by hitting `control-shift-p` on windows or `command-shift-p` on mac.
+We have reset the breakpoints in the above example but kept the `breakpoints.json`. You can see when we import them, all the settings for each breakpiont is kept in it's original location.You access the `import breakpoint` command by hitting `control-shift-p` on windows or `command-shift-p` on mac.
 
 ![importing breakpoints in action](content/import.gif)
 
