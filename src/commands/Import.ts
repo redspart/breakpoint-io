@@ -21,20 +21,21 @@ export function ConvertToSourceBreakpoint(point: any, workspace_path: string) {
 }
 
 export function ImportBreakpoints() {
-  let workspace_path = vscode.workspace.workspaceFolders![0].uri.fsPath;
-  let breakpointsConfig = vscode.workspace.getConfiguration("breakpointIO");
-
-  let breakpoints_json = readFileSync(
-    breakpointsConfig !== undefined && breakpointsConfig.has("exportPath")
-      ? breakpointsConfig["exportPath"]
-      : `${workspace_path}//.vscode//breakpoints.json`,
-    { encoding: "utf8" }
-  );
-  let customBreakpoints = <BreakpointIO[]>JSON.parse(breakpoints_json);
-  let breakpoints = Array<vscode.Breakpoint>();
-  let errors: string[] = [];
-
   try {
+    let workspace_path = vscode.workspace.workspaceFolders![0].uri.fsPath;
+    let breakpointsConfig = vscode.workspace.getConfiguration("breakpointIO");
+  
+    let breakpoints_json = readFileSync(
+      breakpointsConfig !== undefined && breakpointsConfig.has("exportPath")
+        ? breakpointsConfig["exportPath"]
+        : `${workspace_path}//.vscode//breakpoints.json`,
+      { encoding: "utf8" }
+    );
+    let customBreakpoints = <BreakpointIO[]>JSON.parse(breakpoints_json);
+    let breakpoints = Array<vscode.Breakpoint>();
+    let errors: string[] = [];
+
+
     let validator = new ajv();
     customBreakpoints.forEach(element => {
       let valid = validator.validate(Schema, element);

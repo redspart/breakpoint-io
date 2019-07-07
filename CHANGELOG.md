@@ -6,6 +6,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.0] - 2019-06-29
+- Minor bug fixes
+- Added more error handeling
+- Fixed TravisCI build
+- Updated READMe
+
 ## [1.0.0] - 2019-06-25
 ### Intial Release
 - Base functionality to importing and exporting breakpoints
